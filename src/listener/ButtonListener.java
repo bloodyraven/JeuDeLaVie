@@ -1,6 +1,7 @@
 package listener;
 
 import java.awt.Button;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -18,8 +19,14 @@ public class ButtonListener implements ActionListener  {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		System.out.println(c.getColor().toString());
-		this.b.setBackground(c.getColor());
+		if(c.isEnVie()) {
+			this.b.setBackground(Color.white);
+			c.setEnVie(false);
+			c.colorShuffle();
+		} else {
+			this.b.setBackground(c.getColor());
+			c.setEnVie(true);
+		}
 	}
 
 	public Cellule getC() {

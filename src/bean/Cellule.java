@@ -13,6 +13,15 @@ public class Cellule {
 		this.x=x;
 		this.y=y;
 		enVie=false;
+		colorShuffle();
+	}
+	
+	public Cellule(int x, int y, boolean enVie) {
+		this(x,y);
+		this.enVie=enVie;
+	}
+	
+	public void colorShuffle() {
 		int R = (int)(Math.random()*256);
 		int G = (int)(Math.random()*256);
 		int B= (int)(Math.random()*256);
@@ -24,11 +33,6 @@ public class Cellule {
 		final float saturation = 0.9f;//1.0 for brilliant, 0.0 for dull
 		final float luminance = 1.0f; //1.0 for brighter, 0.0 for black
 		this.color = Color.getHSBColor(hue, saturation, luminance);
-	}
-	
-	public Cellule(int x, int y, boolean enVie) {
-		this(x,y);
-		this.enVie=enVie;
 	}
 
 	public int getX() {
