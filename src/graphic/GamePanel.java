@@ -2,6 +2,7 @@ package graphic;
 
 import java.awt.Button;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.GridLayout;
 
 import javax.swing.JPanel;
@@ -21,6 +22,7 @@ public class GamePanel extends JPanel {
 			for (int j = 0; j < tab[0].length; j++) {
 				Button button = new Button();
 				button.setBackground(Color.white);
+				button.setPreferredSize(new Dimension(15, 15));
 				button.addActionListener(new ButtonListener(tab[i][j], button));
 				this.add(button);
 			}
