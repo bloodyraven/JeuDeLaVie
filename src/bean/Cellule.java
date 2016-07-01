@@ -1,4 +1,5 @@
 package bean;
+import java.awt.Button;
 import java.awt.Color;
 import java.util.Random;
 
@@ -8,6 +9,7 @@ public class Cellule {
 	private int x, y;
 	boolean enVie;
 	Color color;
+	Button b;
 	
 	public Cellule(int x, int y) {
 		this.x=x;
@@ -65,6 +67,10 @@ public class Cellule {
 
 	public void setColor(Color color) {
 		this.color = color;
+	}
+	
+	public void setButton(Button b) {
+		this.b=b;
 	}
 	
 	

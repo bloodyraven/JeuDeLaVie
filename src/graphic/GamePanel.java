@@ -24,6 +24,7 @@ public class GamePanel extends JPanel {
 				button.setBackground(Color.white);
 				button.setPreferredSize(new Dimension(15, 15));
 				button.addActionListener(new ButtonListener(tab[i][j], button));
+				tab[i][j].setButton(button);
 				this.add(button);
 			}
 		}

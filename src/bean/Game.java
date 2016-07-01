@@ -1,5 +1,7 @@
 package bean;
 
+import java.awt.Color;
+
 import constantes.Constantes;
 
 /**
@@ -28,8 +30,10 @@ public class Game {
 			for (int j = 0; j < grille[0].length; j++) {
 				if(recupVoisins(i, j) == 3) {
 					grilleSwap[i][j].setEnVie(true);
+					grilleSwap[i][j].b.setBackground(grilleSwap[i][j].getColor());
 				} else {
 					grilleSwap[i][j].setEnVie(false);
+					grilleSwap[i][j].b.setBackground(Color.white);
 				}
 			}
 		}
